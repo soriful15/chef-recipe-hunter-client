@@ -10,13 +10,15 @@ const SpecialFood = () => {
         <>
 
             <div className="carousel w-full mx-auto container mt-16">
-                <div id="slide1" className="carousel-item relative w-full">
-                    <img src={specialRecipe1} className="w-full h-[80%]" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide4" className="btn btn-circle">❮</a>
-                        <a href="#slide2" className="btn btn-circle">❯</a>
+                <div id="slide1" className="carousel-item relative w-full ">
+                    
+                        <img src={specialRecipe1} className="w-full h-[80%]" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide4" className="btn btn-circle">❮</a>
+                            <a href="#slide2" className="btn btn-circle">❯</a>
 
-                    </div>
+                        </div>
+                    
                     <div>
                         <h1 className='text-3xl text-blue-600 font-bold ml-6 mt-12'> Yogurt and Cilantro marinated grilled chicken</h1>
 
@@ -97,7 +99,7 @@ const SpecialFood = () => {
                     </div>
 
                 </div>
-              {/*   <div id="slide4" className="carousel-item relative w-full">
+                {/*   <div id="slide4" className="carousel-item relative w-full">
                     <img src={specialRecipe4} className="w-[] h-[80%]" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide3" className="btn btn-circle">❮</a>
@@ -105,7 +107,7 @@ const SpecialFood = () => {
                     </div>
 
                 </div> */}
-                
+
             </div>
 
 
