@@ -2,6 +2,8 @@ import React from 'react';
 import SpecialFood from '../SpecialFood/SpecialFood';
 import BakedRecipes from '../BakedRecipes/BakedRecipes';
 import Banner from '../Banner/Banner';
+import ChefIntroduction from '../../ChefSection/ChefIntroduction';
+import ChefAbout from '../../ChefSection/ChefAbout';
 
 const Home = () => {
     return (
@@ -9,7 +11,7 @@ const Home = () => {
 
             <section>
 
-              <Banner></Banner>
+                <Banner></Banner>
             </section>
             <section className='1'>
                 <h1 className='text-5xl font-bold text-cyan-700 text-center mt-10'>Special Food</h1>
@@ -20,6 +22,11 @@ const Home = () => {
                 <h1 className='text-5xl font-bold text-cyan-700 text-center mt-16'>  Baked Recipes</h1>
                 <BakedRecipes></BakedRecipes>
             </section>
+
+<section>
+   <ChefAbout></ChefAbout>
+</section>
+
         </div>
     );
 };
