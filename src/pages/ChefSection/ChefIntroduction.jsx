@@ -12,13 +12,14 @@ const ChefIntroduction = ({ categoryData }) => {
 
 
                 <div className="card lg:card-side bg-base-100 shadow-xl">
-                    <figure><img src={chefPicture} className='w-72 h-full' alt="Album" /></figure>
+                    <figure><LazyLoadImage src={chefPicture} className='w-72 h-full' alt="Album" /></figure>
                     <div className="card-body">
                         <h2 className="card-title w-full text-blue-700">{chefName}</h2>
                         <p className='text-green-600'>Experience: {YearOfexperiences}</p>
                         <p><span className='text-indigo-800'>Total Likes: </span><span className='text-yellow-600'>{like}</span></p>
                         <p>
-                            <h4 className='text-indigo-800 font-bold mb-3'>Number Of Recipe:</h4>
+                            <span className='text-indigo-800 font-bold mb-3'>Number Of Recipe:</span>
+                            
                             {numberOfRecipes.map((recipes,index )=>
                       <li key={index} className='mb-3'>{recipes.recipe}</li>  )}</p>
                       
