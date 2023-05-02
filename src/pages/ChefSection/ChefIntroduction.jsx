@@ -4,7 +4,7 @@ import { FaEye } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const ChefIntroduction = ({ categoryData }) => {
-    console.log(categoryData)
+    // console.log(categoryData)
     const { id, chefName, chefPicture, YearOfexperiences, numberOfRecipes, like, } = categoryData
     return (
         <>
