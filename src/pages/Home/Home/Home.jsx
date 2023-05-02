@@ -11,7 +11,7 @@ const Home = () => {
             </section>
 
             <section className='2'>
-            <h1 className='text-5xl font-bold text-cyan-700 text-center mt-10'>  Baked Recipes</h1>
+            <h1 className='text-5xl font-bold text-cyan-700 text-center mt-16'>  Baked Recipes</h1>
            <BakedRecipes></BakedRecipes>
             </section>
         </div>

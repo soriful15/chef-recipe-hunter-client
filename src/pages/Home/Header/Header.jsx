@@ -11,9 +11,9 @@ const Header = () => {
         <>
 
 
-            <section>
+            <section className='bg-sky-100 '>
 
-                <div className='bg-sky-200 px-4 py-5 mx-auto md:max-w-full sm:max-w-xl lg:max-w-screen-xl lg:px-8 md:px-24 '>
+                <div className='px-4 py-5 mx-auto md:max-w-full sm:max-w-xl lg:max-w-screen-xl lg:px-8 md:px-24 '>
                     <div className='second flex items-center justify-between relative'>
                         <div>
                             <Link to='/' >

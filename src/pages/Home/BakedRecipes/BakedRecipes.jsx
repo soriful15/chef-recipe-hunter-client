@@ -6,7 +6,7 @@ import DinnerFood from '../../../assets/BakedRecipes/dinnerFood.jpg'
 
 const BakedRecipes = () => {
     return (
-        <div className='grid lg:grid-cols-3  md:grid-cols-2   mx-auto container gap-5 mt-5 '>
+        <div className='grid lg:grid-cols-3  md:grid-cols-2   mx-auto container gap-5 mt-8 '>
             <div className="card w-96 bg-base-300 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={breakfast} alt="Shoes" className="rounded-xl" />
