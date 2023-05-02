@@ -19,7 +19,7 @@ const SpecialFood = () => {
 
 
                 <div className="card w-96 bg-base-100 shadow-xl">
-                   <LazyLoadImage> <figure><img src={specialRecipe1} className='w-full' alt="Shoes" /></figure></LazyLoadImage>
+                    <figure><LazyLoadImage src={specialRecipe1} className='w-full' alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title text-blue-600 ">
                             Yogurt and Cilantro marinated grilled chicken
@@ -45,7 +45,7 @@ const SpecialFood = () => {
 
 
                 <div className="card w-96 bg-base-100 shadow-xl">
-                    <LazyLoadImage><figure><img src={specialRecipe2} className='w-full' alt="Shoes" /></figure></LazyLoadImage>
+                    <figure><LazyLoadImage src={specialRecipe2} className='w-full' alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title text-blue-600 ">
                             Baked fish in a light yogurt sauce
@@ -71,7 +71,7 @@ const SpecialFood = () => {
 
 
                 <div className="card w-96 bg-base-100 shadow-xl">
-                   <LazyLoadImage> <figure><img src={specialRecipe3} className='w-full' alt="Shoes" /></figure></LazyLoadImage>
+                    <figure><LazyLoadImage src={specialRecipe3} className='w-full' alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title text-blue-600 ">
                             Shahi Rezala
@@ -97,7 +97,7 @@ const SpecialFood = () => {
 
 
                 <div className="card w-96 bg-base-100 shadow-xl">
-               <LazyLoadImage><figure><img src={specialRecipe4} className='w-full' alt="Shoes" /></figure></LazyLoadImage>
+               <figure><LazyLoadImage src={specialRecipe4} className='w-full' alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title text-blue-600 ">
                             Fish Korma
@@ -122,7 +122,7 @@ const SpecialFood = () => {
 
 
                 <div className="card w-96 bg-base-100 shadow-xl">
-                  <LazyLoadImage><figure><img src={specialRecipe5} className='w-full' alt="Shoes" /></figure></LazyLoadImage>
+                  <figure><LazyLoadImage src={specialRecipe5} className='w-full' alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title text-blue-600 ">
                         Beef Vindaloo
@@ -149,7 +149,7 @@ const SpecialFood = () => {
 
 
                 <div className="card w-96 bg-base-100 shadow-xl">
-                  <LazyLoadImage>  <figure><img src={specialRecipe6} className='w-full' alt="Shoes" /></figure></LazyLoadImage>
+                  <figure><LazyLoadImage src={specialRecipe6} className='w-full' alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title text-blue-600 ">
                         Bhuna Khichuri – basic
