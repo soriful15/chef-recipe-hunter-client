@@ -8,6 +8,7 @@ import Blog from "../pages/Home/Blog/Blog";
 import Login from "../pages/Login/Login";
 import ErrorPage from "../layouts/ErrorPage/ErrorPage";
 import ChefIntroduction from "../pages/ChefSection/ChefIntroduction";
+import ChefDetails from "../pages/ChefSection/ChefDetails";
 
   const router = createBrowserRouter([
     {
@@ -26,6 +27,11 @@ import ChefIntroduction from "../pages/ChefSection/ChefIntroduction";
         {
             path:'/login',
             element:<Login></Login>
+        },
+        {
+            path:'/chefCategories/:id',
+            element:<ChefDetails></ChefDetails>,
+            loader:({params})=>fetch(`https://chef-recipe-hunter-server-soriful15.vercel.app/chefCategories/${params.id}`)
         },
        
       ]

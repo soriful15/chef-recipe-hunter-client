@@ -1,6 +1,7 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { FaEye } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const ChefIntroduction = ({ categoryData }) => {
     console.log(categoryData)
@@ -22,7 +23,7 @@ const ChefIntroduction = ({ categoryData }) => {
                       <li key={index} className='mb-3'>{recipes.recipe}</li>  )}</p>
                       
                         <div className="card-actions justify-end">
-                            <button className="btn btn-outline btn-accent"><FaEye className=''></FaEye></button>
+                         <Link to={`/chefCategories/${categoryData.id}`}><button className="btn btn-outline btn-accent"><FaEye className=''></FaEye></button></Link>
                         </div>
                     </div>
                 </div>
