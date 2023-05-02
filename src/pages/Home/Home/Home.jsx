@@ -15,6 +15,7 @@ const Home = () => {
             </section>
             <section className='1'>
                 <h1 className='text-5xl font-bold text-cyan-700 text-center mt-10'>Special Food</h1>
+                <p className='text-center mt-2'>Check and find the best quality food, we always try to do best service</p>
                 <SpecialFood></SpecialFood>
             </section>
 

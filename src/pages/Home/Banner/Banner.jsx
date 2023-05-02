@@ -14,7 +14,7 @@ Enjoy food all over the world
     <p className='font-bold text-xl text-amber-700 mt-4'>
     A recipe is a formula of ingredients and a list of instructions for creating prepared foods. It is used to control quality, quantity, and food costs in a foodservice operation. A recipe may be simple to complex based on the requirements of the operation and the intended user. For example, an experienced chef may need a recipe with only a few details, while a beginner cook may need more information about ingredients, preparation steps, cooking times and temperatures, visual cues, and equipment requirements. 
     </p>
-    <button className="btn btn-active btn-primary mt-4">Get Started</button>
+    <button className="btn btn-active btn-primary mt-4">Hire Now</button>
 </div>
 
 

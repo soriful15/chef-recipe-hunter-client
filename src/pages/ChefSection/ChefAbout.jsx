@@ -11,7 +11,12 @@ const ChefAbout = () => {
     },[])
 
     return (
+        
         <>
+        <h1 className='text-center text-5xl mt-20'>Focus on Quality to Find the best Chef</h1>
+        <p className='text-center mt-2'>Industry-Focused Tools You Need to Save Time, Stand Out, and Attract Top Chef</p>
+        <div className='grid md:grid-cols-2 mt-10 gap-14  container mx-auto'>
+
             {
                 // eslint-disable-next-line react/jsx-key
                 ChefCategoryData.map(categoryData=> <ChefIntroduction
@@ -20,6 +25,7 @@ const ChefAbout = () => {
                 
                 ></ChefIntroduction>)
             }
+        </div>
         </>
     );
 };
