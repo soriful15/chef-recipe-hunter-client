@@ -1,5 +1,5 @@
 import React from 'react';
-
+import footerLogo from '../../assets/footerlogo/footerlogo.png'
 const Footer = () => {
     return (
         <div className='py-14 mt-20'>
@@ -28,6 +28,9 @@ const Footer = () => {
                     <a className="link link-hover">Terms of use</a>
                     <a className="link link-hover">Privacy policy</a>
                     <a className="link link-hover">Cookie policy</a>
+                <div>
+                    <img src={footerLogo} alt="" className='w-full rounded-xl mt-2' />
+                </div>
                 </div>
             </footer>
             <footer className="footer px-10 py-4 border-t bg-orange-200 text-base-content border-base-300">
