@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { Bars3BottomRightIcon, XCircleIcon } from '@heroicons/react/24/solid'
 import { FaUserCircle } from 'react-icons/fa';
+import { AuthContext } from '../../../Provider/AuthProvider';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
-
+const {logOut}=useContext(AuthContext)
 
     return (
 
