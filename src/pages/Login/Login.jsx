@@ -5,13 +5,18 @@ import Lottie from 'lottie-react'
 import login from '../../assets/107385-login.json'
 const Login = () => {
 
-const handleSingIn=()=>{
-    
-}
+    const handleSingIn = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const password = form.password.value
+        const email = form.email.value
+        console.log( email, password)
+
+    }
 
     return (
         <>
-            <div onSubmit={handleSingIn} className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left ml-2">
                         <h1 className="text-5xl font-bold ml-2">Login now!</h1>
@@ -22,7 +27,7 @@ const handleSingIn=()=>{
                         </div>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <div className="card-body">
+                        <form onSubmit={handleSingIn} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -43,7 +48,7 @@ const handleSingIn=()=>{
                             </div>
 
                             <p className='text-center'>Do not have an Account? <Link to='/register'><span className='text-green-500'>Register</span></Link></p>
-                        </div>
+                        </form >
                     </div>
                 </div>
             </div>

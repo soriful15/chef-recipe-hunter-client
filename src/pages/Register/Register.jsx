@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import register from '../../assets/38435-register.json'
 import Lottie from 'lottie-react'
 import { Link } from 'react-router-dom';
 const Register = () => {
+    const [error,setError]=useState('')
+    const [success,setSuccess]=useState('')
+
 
     const handleRegister = (e) => {
         e.preventDefault();
+        const form = e.target;
+        const name = form.name.value
+        const password = form.password.value
+        const email = form.email.value
+        const photo = form.photo.value
+        console.log(name, photo, email, password)
+
+
     }
 
     return (
         <>
-            <div onSubmit={handleRegister} className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Register now!</h1>
@@ -20,8 +31,8 @@ const Register = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <div className="card-body">
+                    <div onSubmit={handleRegister} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                        <form  className="card-body">
 
                             <div className="form-control">
                                 <label className="label">
@@ -56,7 +67,7 @@ const Register = () => {
                                 <button className="btn btn-primary">Register</button>
                             </div>
                             <p className='text-center'>AlReady have an Account? <Link to='/login'><span className='text-green-500'>login</span></Link></p>
-                        </div>
+                        </form >
                     </div>
                 </div>
             </div>
