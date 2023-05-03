@@ -9,6 +9,7 @@ import Login from "../pages/Login/Login";
 import ErrorPage from "../layouts/ErrorPage/ErrorPage";
 import ChefIntroduction from "../pages/ChefSection/ChefIntroduction";
 import ChefDetails from "../pages/ChefSection/ChefDetails";
+import Register from "../pages/Register/Register";
 
   const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ import ChefDetails from "../pages/ChefSection/ChefDetails";
         {
             path:'/login',
             element:<Login></Login>
+        },
+        {
+            path:'/register',
+            element:<Register></Register>
         },
         {
             path:'/chefCategories/:id',
