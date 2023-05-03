@@ -40,9 +40,9 @@ const Blog = () => {
                     <h1 className='text-4xl text-blue-800 font-bold text-center'>3.Ques: Tell us the difference between nodejs and express js.?</h1>
                     <p className='text-3xl text-center text-orange-700 mt-3'>Ans: The difference between nodejs and express js</p>
                     <p className='text-2xl mt-2 text-center font-bold '>
-                    Node.js itself provides an HTTP module, whose createServer method returns an object that we can use to respond to HTTP requests.  That object inherits from the http.Server prototype.
-                    <br />
-                    Express provides a createServer method that extends Connect is Server prototype.  So all of Connect iss functionality is here, plus a useful DSL for rendering and describing routes. so that.. Node. js is detailed as A platform built on Chromes JavaScript runtime for easily building fast, scalable network applications.
+                        Node.js itself provides an HTTP module, whose createServer method returns an object that we can use to respond to HTTP requests.  That object inherits from the http.Server prototype.
+                        <br />
+                        Express provides a createServer method that extends Connect is Server prototype.  So all of Connect iss functionality is here, plus a useful DSL for rendering and describing routes. so that.. Node. js is detailed as A platform built on Chromes JavaScript runtime for easily building fast, scalable network applications.
 
 
                     </p>
