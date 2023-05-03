@@ -59,7 +59,7 @@ const Header = () => {
 
                         <div className='hidden sm:hidden md:hidden lg:block'>
                             {user ?
-                                <button title='Star Applying LogOut' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
+                                <button title='Star Applying LogOut' onClick={handleLogOut} className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
                                     LogOut
                                 </button>
                                 : <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
@@ -117,7 +117,7 @@ const Header = () => {
                                             <div className='mt-4'>
 
                                                 {user ?
-                                                    <button title='Star Applying LogOut' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
+                                                    <button onClick={handleLogOut} title='Star Applying LogOut' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
                                                         LogOut
                                                     </button>
                                                     : <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
