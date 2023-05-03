@@ -8,18 +8,21 @@ import LoaderSpinner from '../../../LoaderSpinner/LoaderSpinner';
 
 const Home = () => {
 
-const navigation=useNavigation()
-console.log(navigation.state)
+    const navigation = useNavigation()
+    console.log(navigation.state)
 
-if (navigation.state === 'loading') {
-    return <LoaderSpinner/>
-  }
+    if (navigation.state === 'loading') {
+        return <LoaderSpinner />
+    }
     return (
         <div>
 
             <section>
 
                 <Banner></Banner>
+            </section>
+            <section>
+                <ChefAbout></ChefAbout>
             </section>
             <section className='1'>
                 <h1 className='text-5xl font-bold text-cyan-700 text-center mt-10'>Special Food</h1>
@@ -32,9 +35,9 @@ if (navigation.state === 'loading') {
                 <BakedRecipes></BakedRecipes>
             </section>
 
-<section>
+            {/* <section>
    <ChefAbout></ChefAbout>
-</section>
+</section> */}
 
         </div>
     );
