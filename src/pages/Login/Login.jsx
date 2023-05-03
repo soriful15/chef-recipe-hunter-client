@@ -30,12 +30,12 @@ let from=location.state?.from?.pathname || '/';
             })
     }
 
-    const handleGoogleSing = () => {
+    const handleGoogleSing= () => {
         googleProvider()
             .then((result) => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser)
-               
+                navigate(from,{replace:true})
 
             })
             .catch((error) => {
@@ -51,6 +51,7 @@ let from=location.state?.from?.pathname || '/';
 
                 const loggedInUser = result.user
                 console.log(loggedInUser)
+                navigate(from,{replace:true})
                 
             })
             .catch((error) => {

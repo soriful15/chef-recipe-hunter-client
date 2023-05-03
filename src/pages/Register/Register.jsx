@@ -1,14 +1,14 @@
 import React, { useContext, useState } from 'react';
 import register from '../../assets/38435-register.json'
 import Lottie from 'lottie-react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const Register = () => {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
-    const { createUser } = useContext(AuthContext)
-
+    const { createUser,updateUserData } = useContext(AuthContext)
+    const navigate=useNavigate();
     const handleRegister = (e) => {
         e.preventDefault();
         setSuccess('')
@@ -24,14 +24,14 @@ const Register = () => {
             setError('please add at least 6 characters in your password')
             return
         }
-        if (!/(?=.*[A-Z])/.test(password)) {
+        /* if (!/(?=.*[A-Z])/.test(password)) {
             setError('please add at least one uppercase')
             return;
         }
         else if (!/(?=.*[0-9])/.test(password)) {
             setError('please add at least two numbers ')
             return;
-        }
+        } */
 
 
 
@@ -42,7 +42,19 @@ const Register = () => {
                 setSuccess('User has created successfully')
                 form.reset()
                 console.log(createdUser)
+                navigate('/')
+
+                updateUserData(name,photo)
+                .then(()=>{
+                    console.log('update Profile')
+                })
+                .catch((error) => {
+                    console.log(error.message)
+                  
+                })
+                
             })
+
             .catch((error) => {
                 console.log(error.message)
                 setError(error.message)
@@ -50,6 +62,9 @@ const Register = () => {
 
 
     }
+
+
+
 
     return (
         <>

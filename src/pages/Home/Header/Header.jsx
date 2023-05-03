@@ -49,11 +49,34 @@ const Header = () => {
                                         About
                                     </NavLink>
                                 </li>
-                                <li>
-                                    {user && <NavLink title='profile Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
-                                        <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
-                                    </NavLink>}
-                                </li>
+
+                                {
+                                    user ? <><div className="dropdown dropdown-end">
+                                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                            <div className="w-10 rounded-full">
+                                                <img data-toggle="tooltip"
+                                                    title={user.displayName} src={user && user.photoURL} />
+                                            </div>
+                                        </label>
+                                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                                            <li>
+                                                <a className="justify-between">
+                                                    Profile
+                                                    <span className="badge">New</span>
+                                                </a>
+                                            </li>
+                                            <li><Link to="/login" onClick={handleLogOut}>Logout</Link></li>
+                                        </ul>
+                                    </div></> : <> <li>
+
+                                        <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
+                                            <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
+                                                Login
+                                            </button>
+                                        </NavLink>
+                                    </li></>
+
+                                }
 
                             </ul>
 
@@ -62,17 +85,7 @@ const Header = () => {
 
                         </div>
 
-                        <div className='hidden sm:hidden md:hidden lg:block'>
-                            {user ?
-                                <button title='Star Applying LogOut' onClick={handleLogOut} className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
-                                    LogOut
-                                </button>
-                                : <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
-                                    <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
-                                        Login
-                                    </button>
-                                </NavLink>}
-                        </div>
+                       
 
                         <div className='lg:hidden'>
 
@@ -114,9 +127,7 @@ const Header = () => {
                                                     <li>
                                                         <Link to='/about' className='font-medium hover:text-blue-400 text-gray-700 duration-200 tracking-wide transition-colors '>About</Link>
                                                     </li>
-                                                    <li>
-                                        { user && <Link className='font-medium hover:text-blue-400 text-gray-700 duration-200 tracking-wide transition-colors '> <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle></Link>}
-                                                    </li>
+                                                   
                                                 </ul>
 
                                             </nav>
@@ -124,15 +135,33 @@ const Header = () => {
 
                                             <div className='mt-4'>
 
-                                                {user ?
-                                                    <button onClick={handleLogOut} title='Star Applying LogOut' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
-                                                        LogOut
-                                                    </button>
-                                                    : <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
-                                                        <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
-                                                            Login
-                                                        </button>
-                                                    </NavLink>}
+                                            {
+                                    user ? <><div className="dropdown dropdown-end">
+                                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                            <div className="w-10 rounded-full">
+                                                <img data-toggle="tooltip"
+                                                    title={user.displayName} src={user && user.photoURL} />
+                                            </div>
+                                        </label>
+                                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                                            <li>
+                                                <a className="justify-between">
+                                                    Profile
+                                                    <span className="badge">New</span>
+                                                </a>
+                                            </li>
+                                            <li><Link to="/login" onClick={handleLogOut}>Logout</Link></li>
+                                        </ul>
+                                    </div></> : <> <li>
+
+                                        <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
+                                            <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
+                                                Login
+                                            </button>
+                                        </NavLink>
+                                    </li></>
+
+                                }
                                             </div>
 
                                         </div>
