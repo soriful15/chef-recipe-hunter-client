@@ -1,4 +1,4 @@
-/* import React from 'react';
+import React from 'react';
 
 const LoaderSpinner = () => {
     return (
@@ -10,4 +10,4 @@ const LoaderSpinner = () => {
     );
 };
 
-export default LoaderSpinner; */
+export default LoaderSpinner;

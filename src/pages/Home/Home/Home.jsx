@@ -3,17 +3,17 @@ import SpecialFood from '../SpecialFood/SpecialFood';
 import BakedRecipes from '../BakedRecipes/BakedRecipes';
 import Banner from '../Banner/Banner';
 import ChefAbout from '../../ChefSection/ChefAbout';
-/* import { useNavigation } from 'react-router-dom';
-import LoaderSpinner from '../../../LoaderSpinner/LoaderSpinner'; */
+import { useNavigation } from 'react-router-dom';
+import LoaderSpinner from '../../../LoaderSpinner/LoaderSpinner';
 
 const Home = () => {
 
-/* const navigation=useNavigation()
+const navigation=useNavigation()
 console.log(navigation.state)
 
 if (navigation.state === 'loading') {
     return <LoaderSpinner/>
-  } */
+  }
     return (
         <div>
 

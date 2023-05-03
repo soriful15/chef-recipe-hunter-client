@@ -1,10 +1,21 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import RecipeItem from './RecipeItem';
+import LoaderSpinner from '../../LoaderSpinner/LoaderSpinner';
+
 
 
 const ChefDetails = () => {
+
+    const navigation = useNavigation()
+    console.log(navigation.state)
+
+    if (navigation.state === 'loading') {
+        return <LoaderSpinner></LoaderSpinner>
+    }
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const chefDetailsData = useLoaderData()
     console.log(chefDetailsData)
     const { chefName, chefPicture, YearOfexperiences, numberOfRecipes, like, Description,
