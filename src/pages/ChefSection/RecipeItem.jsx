@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 import { HiHeart } from "react-icons/hi";
 import { Rating } from '@smastrom/react-rating'
 
 import '@smastrom/react-rating/style.css'
+import {  toast } from 'react-toastify';
 const RecipeItem = ({ recipeItem }) => {
-    console.log(recipeItem)
+
+const [favorite,setFavorite]=useState(false)
+
+const handleAddFavorite=()=>{
+setFavorite(true)
+toast("Add To Favorite");
+}
+
+    // console.log(recipeItem)
     const { Ingredients, rating, recipe, recipeImage, Cooking_method } = recipeItem
     return (
         <>
@@ -34,7 +43,7 @@ const RecipeItem = ({ recipeItem }) => {
                         <Rating style={{ maxWidth: 150 }} value={Math.round(rating) || 0} readOnly /><span className='ms-2'> {rating}</span>
                     </div>
                     <div className='absolute top-0 left-0 px-2'>
-                        <button className="btn btn-success"> <HiHeart></HiHeart> Add To Favorite</button>
+                        <button className="btn btn-success" onClick={handleAddFavorite} disabled={favorite}> <HiHeart></HiHeart> Add To Favorite</button>
                     </div>
 
                 </div>
