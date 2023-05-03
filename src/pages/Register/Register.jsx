@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import register from '../../assets/38435-register.json'
 import Lottie from 'lottie-react'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
+
 const Register = () => {
     const [error,setError]=useState('')
     const [success,setSuccess]=useState('')
-
-
+ const {user}=useContext(AuthContext)
+console.log(user)
     const handleRegister = (e) => {
         e.preventDefault();
         const form = e.target;
