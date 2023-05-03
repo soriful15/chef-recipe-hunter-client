@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const Register = () => {
-    const [error,setError]=useState('')
-    const [success,setSuccess]=useState('')
- const {user}=useContext(AuthContext)
-console.log(user)
+    const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
+    const { createUser } = useContext(AuthContext)
+
     const handleRegister = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -16,7 +16,15 @@ console.log(user)
         const password = form.password.value
         const email = form.email.value
         const photo = form.photo.value
-        console.log(name, photo, email, password)
+        // console.log(name, photo, email, password)
+        createUser(email, password)
+            .then((result) => {
+                const createdUser = result.user
+                console.log(createdUser)
+            })
+            .catch((error) => {
+                console.log(error.message)
+            })
 
 
     }
@@ -34,7 +42,7 @@ console.log(user)
                         </div>
                     </div>
                     <div onSubmit={handleRegister} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form  className="card-body">
+                        <form className="card-body">
 
                             <div className="form-control">
                                 <label className="label">
