@@ -12,19 +12,19 @@ const ChefDetails = () => {
     } = chefDetailsData
     return (
         <>
-            <div className='mx-auto container mt-10'>
-                <div className="card card-side bg-base-100 shadow-xl">
+            <div className='mx-auto container mt-10 '>
+                <div className=" bg-base-100 shadow-xl lg:flex lg:gap-5 px-5 py-5">
                     <figure><LazyLoadImage src={chefPicture} className='w-full' alt="Movie" /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title text-blue-700">Name:{chefName}</h2>
-                        <p className='text-green-800'>About:{Description}</p>
+                    <div className="mt-5">
+                        <h2 className=" text-blue-700 mt-2">Name:{chefName}</h2>
+                        <p className='text-green-800 mt-2'>About:{Description}</p>
                         <p>
-                            <span className='text-indigo-800 font-bold mt-0 mb-0'>Recipe:</span>
+                            <span className='text-indigo-800 font-bold mt-0 mb-0 mt-2'>Recipe:</span>
                             {numberOfRecipes.map((recipes, index) =>
                                 <li key={index} className=''>{recipes.recipe}</li>)}
                         </p>
-                        <p><span className='text-indigo-800 mt-0 mb-0'>Total Likes: </span><span className='text-yellow-600'>{like}</span></p>
-                        <p className='text-green-600 mt-0 mb-0'>Experience: {YearOfexperiences}</p>
+                        <p className='mt-2'><span className='text-indigo-800 mt-0 mb-0'>Total Likes: </span><span className='text-yellow-600'>{like}</span></p>
+                        <p className='text-green-600 mt-2'>Experience: {YearOfexperiences}</p>
                     </div>
                 </div>
             </div>
