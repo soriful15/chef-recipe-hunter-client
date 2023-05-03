@@ -19,7 +19,7 @@ const ChefDetails = () => {
                         <h2 className=" text-blue-700 mt-2">Name:{chefName}</h2>
                         <p className='text-green-800 mt-2'>About:{Description}</p>
                         <p>
-                            <span className='text-indigo-800 font-bold mt-0 mb-0 mt-2'>Recipe:</span>
+                            <span className='text-indigo-800 font-bold  mt-2'>Recipe:</span>
                             {numberOfRecipes.map((recipes, index) =>
                                 <li key={index} className=''>{recipes.recipe}</li>)}
                         </p>
