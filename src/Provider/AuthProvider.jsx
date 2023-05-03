@@ -5,38 +5,41 @@ export const AuthContext = createContext(null)
 
 const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
-    const [user,setUser]=useState(null)
-    
-    const googleProviderSingIn=new GoogleAuthProvider()
-const gitProviderSingIn= new GithubAuthProvider()
-const createUser =(email,password)=>{
-    return createUserWithEmailAndPassword(auth,email,password)
-}
+    const [user, setUser] = useState(null)
 
-const singIn=(email,password)=>{
-    return signInWithEmailAndPassword(auth,email,password)
-}
-
-const googleProvider=()=>{
-    return signInWithPopup(auth,googleProviderSingIn)
-}
-const gitProvider=()=>{
-    return signInWithPopup(auth,gitProviderSingIn)
-}
-const logOut=()=>{
-return signOut(auth)
-}
-
-
-useEffect(()=>{
-    const unsubscribe=onAuthStateChanged(auth,loggedUser=>{
-        console.log('logged in user inside auth state observe', loggedUser);
-        setUser(loggedUser)
-    })
-    return()=>{
-        unsubscribe();
+    const googleProviderSingIn = new GoogleAuthProvider()
+    const gitProviderSingIn = new GithubAuthProvider()
+    const createUser = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password)
     }
-},[])
+
+    const singIn = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+
+    const googleProvider = () => {
+        // setUser(null)
+        return signInWithPopup(auth, googleProviderSingIn)
+    }
+    const gitProvider = () => {
+        // setUser(null)
+        return signInWithPopup(auth, gitProviderSingIn)
+    }
+    const logOut = () => {
+        // setUser(null)
+        return signOut(auth)
+    }
+
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, loggedUser => {
+            console.log('logged in user inside auth state observe', loggedUser);
+            setUser(loggedUser)
+        })
+        return () => {
+            unsubscribe();
+        }
+    }, [])
 
 
     const authInfo = {
@@ -46,6 +49,7 @@ useEffect(()=>{
         googleProvider,
         gitProvider,
         logOut,
+        // setUser
 
     }
 

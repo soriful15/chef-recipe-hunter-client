@@ -5,7 +5,17 @@ import { FaUserCircle } from 'react-icons/fa';
 import { AuthContext } from '../../../Provider/AuthProvider';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
-const {logOut}=useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
+
+
+
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result)
+            })
+            .catch(error => console.log(error))
+    }
 
     return (
 
@@ -35,9 +45,9 @@ const {logOut}=useContext(AuthContext)
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink title='profile Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
+                                    {user && <NavLink title='profile Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
                                         <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
-                                    </NavLink>
+                                    </NavLink>}
                                 </li>
 
                             </ul>
@@ -48,11 +58,15 @@ const {logOut}=useContext(AuthContext)
                         </div>
 
                         <div className='hidden sm:hidden md:hidden lg:block'>
-                            <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
-                                <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
-                                    Login
+                            {user ?
+                                <button title='Star Applying LogOut' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
+                                    LogOut
                                 </button>
-                            </NavLink>
+                                : <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
+                                    <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
+                                        Login
+                                    </button>
+                                </NavLink>}
                         </div>
 
                         <div className='lg:hidden'>
@@ -93,7 +107,7 @@ const {logOut}=useContext(AuthContext)
                                                         <Link to='/blog' className='font-medium hover:text-blue-400 text-gray-700 duration-200 tracking-wide transition-colors '>Blog</Link>
                                                     </li>
                                                     <li>
-                                                        <Link className='font-medium hover:text-blue-400 text-gray-700 duration-200 tracking-wide transition-colors '> <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle></Link>
+                                        { user && <Link className='font-medium hover:text-blue-400 text-gray-700 duration-200 tracking-wide transition-colors '> <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle></Link>}
                                                     </li>
                                                 </ul>
 
@@ -101,15 +115,16 @@ const {logOut}=useContext(AuthContext)
 
 
                                             <div className='mt-4'>
-                                                {/*  <button title='Star Applying Link' className={` bg-violet-800 text-white text-xl px-4 py-4  ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
-                                                    Start Applying
-                                                </button> */}
 
-                                                <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
-                                                    <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
-                                                        Login
+                                                {user ?
+                                                    <button title='Star Applying LogOut' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
+                                                        LogOut
                                                     </button>
-                                                </NavLink>
+                                                    : <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
+                                                        <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
+                                                            Login
+                                                        </button>
+                                                    </NavLink>}
                                             </div>
 
                                         </div>
