@@ -24,7 +24,7 @@ const ChefIntroduction = ({ categoryData }) => {
                       <li key={index} className='mb-3'>{recipes.recipe}</li>  )}</p>
                       
                         <div className="card-actions justify-end">
-                         <Link to={`/chefCategories/${categoryData.id}`}><button className="btn btn-outline btn-accent"><FaEye className=''></FaEye></button></Link>
+                         <Link to={`/chefCategories/${categoryData.id}`}><button className="btn btn-outline btn-accent"><FaEye className='mr-1'></FaEye>View Details</button></Link>
                         </div>
                     </div>
                 </div>
