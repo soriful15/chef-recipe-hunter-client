@@ -1,13 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 // eslint-disable-next-line react/no-unescaped-entities
 import Lottie from 'lottie-react'
 import login from '../../assets/107385-login.json'
 import { AuthContext } from '../../Provider/AuthProvider';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 const Login = () => {
-    const { singIn, googleProvider, gitProvider,  /* setUser */ } = useContext(AuthContext)
-// const [log,setLog]=useState()
+    const { singIn, googleProvider, gitProvider } = useContext(AuthContext)
+
+const navigate=useNavigate();
+const location=useLocation();
+let from=location.state?.from?.pathname || '/';
     const handleSingIn = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -19,6 +22,7 @@ const Login = () => {
                 const loggedUser = result.user
                 form.reset()
                 console.log(loggedUser);
+                navigate(from,{replace:true})
 
             })
             .catch(error => {
@@ -31,7 +35,7 @@ const Login = () => {
             .then((result) => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser)
-                // setUser(loggedInUser)
+               
 
             })
             .catch((error) => {
@@ -47,7 +51,7 @@ const Login = () => {
 
                 const loggedInUser = result.user
                 console.log(loggedInUser)
-                // setUser(loggedInUser)
+                
             })
             .catch((error) => {
                 console.log('error', error)

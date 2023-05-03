@@ -2,10 +2,18 @@ import React from 'react';
 import SpecialFood from '../SpecialFood/SpecialFood';
 import BakedRecipes from '../BakedRecipes/BakedRecipes';
 import Banner from '../Banner/Banner';
-import ChefIntroduction from '../../ChefSection/ChefIntroduction';
 import ChefAbout from '../../ChefSection/ChefAbout';
+/* import { useNavigation } from 'react-router-dom';
+import LoaderSpinner from '../../../LoaderSpinner/LoaderSpinner'; */
 
 const Home = () => {
+
+/* const navigation=useNavigation()
+console.log(navigation.state)
+
+if (navigation.state === 'loading') {
+    return <LoaderSpinner/>
+  } */
     return (
         <div>
 

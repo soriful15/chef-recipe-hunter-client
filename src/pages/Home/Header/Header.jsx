@@ -45,6 +45,11 @@ const Header = () => {
                                     </NavLink>
                                 </li>
                                 <li>
+                                    <NavLink to='/about' title=' About Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
+                                        About
+                                    </NavLink>
+                                </li>
+                                <li>
                                     {user && <NavLink title='profile Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
                                         <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
                                     </NavLink>}
@@ -105,6 +110,9 @@ const Header = () => {
                                                     </li>
                                                     <li>
                                                         <Link to='/blog' className='font-medium hover:text-blue-400 text-gray-700 duration-200 tracking-wide transition-colors '>Blog</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to='/about' className='font-medium hover:text-blue-400 text-gray-700 duration-200 tracking-wide transition-colors '>About</Link>
                                                     </li>
                                                     <li>
                                         { user && <Link className='font-medium hover:text-blue-400 text-gray-700 duration-200 tracking-wide transition-colors '> <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle></Link>}

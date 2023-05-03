@@ -95,8 +95,8 @@ const Register = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            <p className='text-yellow-400 text-center mb-2 px-4'>{error}</p>
-                            <p className='text-green-600 px-4 text-center mb-2'>{success}</p>
+                            <p className='text-yellow-400 text-center mb-2 px-4 font-bold text-xl'>{error}</p>
+                            <p className='text-green-600 px-4 text-center mb-2 font-bold text-xl'>{success}</p>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
                             </div>
