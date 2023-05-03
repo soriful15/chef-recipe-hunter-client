@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line react/no-unescaped-entities
 import Lottie from 'lottie-react'
 import login from '../../assets/107385-login.json'
+import { AuthContext } from '../../Provider/AuthProvider';
 const Login = () => {
+const {singIn}=useContext(AuthContext)
 
     const handleSingIn = (e) => {
         e.preventDefault();
         const form = e.target;
         const password = form.password.value
         const email = form.email.value
-        console.log( email, password)
+        // console.log( email, password)
+        singIn(email, password)
+            .then((result) => {
+                const loggedUser = result.user
+                console.log(loggedUser);
+            
+            })
+            .catch(error => {
+                console.log(error);
+            })
 
     }
 
