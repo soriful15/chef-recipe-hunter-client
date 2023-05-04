@@ -14,7 +14,6 @@ const Header = () => {
             })
             .catch(error => console.log(error))
     }
-
     return (
 
         <>
@@ -54,7 +53,7 @@ const Header = () => {
                                         </label>
                                         <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
                                             <li>
-                                              <Link to='/updateProfile className="justify-between"'> 
+                                                <Link to='/updateProfile' className="justify-between">
                                                     Profile
                                                     <span className="badge ml-1">New</span>
                                                 </Link>
@@ -71,6 +70,10 @@ const Header = () => {
                                     </li></>
 
                                 }
+
+
+
+
 
 
                             </ul>
@@ -124,6 +127,8 @@ const Header = () => {
                                             </nav>
 
 
+
+
                                             <div className='mt-4'>
 
                                                 {
@@ -133,23 +138,32 @@ const Header = () => {
                                                                 <img data-toggle="tooltip"
                                                                     title={user.displayName} src={user && user.photoURL} />
                                                             </div>
+
+
+
+
+
+
+
                                                         </label>
                                                         <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
                                                             <li>
-                                                                <a className="justify-between">
+                                                                <Link to='/updateProfile' className="justify-between">
                                                                     Profile
-                                                                    <span className="badge">New</span>
-                                                                </a>
+                                                                    <span className="badge ml-1">New</span>
+                                                                </Link>
+
+
                                                             </li>
                                                             <li><Link to="/login" onClick={handleLogOut}>Logout</Link></li>
                                                         </ul>
-                                                    </div></> : 
+                                                    </div></> :
 
-                        <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
-                                                     <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>Login
-                                                 </button>
+                                                        <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
+                                                            <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>Login
+                                                            </button>
                                                         </NavLink>
-                                                    
+
 
                                                 }
                                             </div>
