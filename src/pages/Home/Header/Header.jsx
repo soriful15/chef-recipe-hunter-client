@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Bars3BottomRightIcon, XCircleIcon } from '@heroicons/react/24/solid'
-import { FaUserCircle } from 'react-icons/fa';
+
 import { AuthContext } from '../../../Provider/AuthProvider';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -44,11 +44,7 @@ const Header = () => {
                                         Blog
                                     </NavLink>
                                 </li>
-                                <li>
-                                    <NavLink to='/about' title=' About Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
-                                        About
-                                    </NavLink>
-                                </li>
+
 
                                 {
                                     user ? <><div className="dropdown dropdown-end">
@@ -85,7 +81,7 @@ const Header = () => {
 
                         </div>
 
-                       
+
 
                         <div className='lg:hidden'>
 
@@ -124,10 +120,6 @@ const Header = () => {
                                                     <li>
                                                         <Link to='/blog' className='font-medium hover:text-blue-400 text-gray-700 duration-200 tracking-wide transition-colors '>Blog</Link>
                                                     </li>
-                                                    <li>
-                                                        <Link to='/about' className='font-medium hover:text-blue-400 text-gray-700 duration-200 tracking-wide transition-colors '>About</Link>
-                                                    </li>
-                                                   
                                                 </ul>
 
                                             </nav>
@@ -135,33 +127,32 @@ const Header = () => {
 
                                             <div className='mt-4'>
 
-                                            {
-                                    user ? <><div className="dropdown dropdown-end">
-                                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                            <div className="w-10 rounded-full">
-                                                <img data-toggle="tooltip"
-                                                    title={user.displayName} src={user && user.photoURL} />
-                                            </div>
-                                        </label>
-                                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                                            <li>
-                                                <a className="justify-between">
-                                                    Profile
-                                                    <span className="badge">New</span>
-                                                </a>
-                                            </li>
-                                            <li><Link to="/login" onClick={handleLogOut}>Logout</Link></li>
-                                        </ul>
-                                    </div></> : <> <li>
+                                                {
+                                                    user ? <><div className="dropdown dropdown-end">
+                                                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                                            <div className="w-10 rounded-full">
+                                                                <img data-toggle="tooltip"
+                                                                    title={user.displayName} src={user && user.photoURL} />
+                                                            </div>
+                                                        </label>
+                                                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                                                            <li>
+                                                                <a className="justify-between">
+                                                                    Profile
+                                                                    <span className="badge">New</span>
+                                                                </a>
+                                                            </li>
+                                                            <li><Link to="/login" onClick={handleLogOut}>Logout</Link></li>
+                                                        </ul>
+                                                    </div></> : 
 
-                                        <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
-                                            <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
-                                                Login
-                                            </button>
-                                        </NavLink>
-                                    </li></>
+                        <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
+                                                     <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>Login
+                                                 </button>
+                                                        </NavLink>
+                                                    
 
-                                }
+                                                }
                                             </div>
 
                                         </div>
