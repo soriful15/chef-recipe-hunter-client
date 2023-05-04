@@ -5,6 +5,7 @@ import Banner from '../Banner/Banner';
 import ChefAbout from '../../ChefSection/ChefAbout';
 import { useNavigation } from 'react-router-dom';
 import LoaderSpinner from '../../../LoaderSpinner/LoaderSpinner';
+import CustomarSays from '../CustomarSays/CustomarSays';
 
 const Home = () => {
 
@@ -35,9 +36,9 @@ const Home = () => {
                 <BakedRecipes></BakedRecipes>
             </section>
 
-            {/* <section>
-   <ChefAbout></ChefAbout>
-</section> */}
+            <section>
+                <CustomarSays></CustomarSays>
+            </section>
 
         </div>
     );
