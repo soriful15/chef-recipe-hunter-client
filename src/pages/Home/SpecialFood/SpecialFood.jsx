@@ -7,8 +7,10 @@ import specialRecipe5 from '../../../assets/special recipe img/vindaloo.jpg'
 import specialRecipe6 from '../../../assets/special recipe img/BhunaKhichuri-800x475.png'
 
 import Rating from 'react-rating';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import { FaStar, FaRegStar } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
+
 const SpecialFood = () => {
     return (
         <>
@@ -19,7 +21,11 @@ const SpecialFood = () => {
 
 
                 <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure><LazyLoadImage src={specialRecipe1} className='w-full h-52' alt="Shoes" /></figure>
+                    <LazyLoad>
+
+                        <img src={specialRecipe1} className='w-full h-52 rounded-xl' alt="Shoes" />
+                    </LazyLoad>
+
                     <div className="card-body">
                         <h2 className="card-title text-blue-600 ">
                             Yogurt and Cilantro marinated grilled chicken
@@ -45,7 +51,11 @@ const SpecialFood = () => {
 
 
                 <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure><LazyLoadImage src={specialRecipe2} className='w-full h-52' alt="Shoes" /></figure>
+                    <LazyLoad>
+
+                        <img src={specialRecipe2} className='w-full h-52 rounded-xl' alt="Shoes" />
+                    </LazyLoad>
+
                     <div className="card-body">
                         <h2 className="card-title text-blue-600 ">
                             Baked fish in a light yogurt sauce
@@ -71,7 +81,11 @@ const SpecialFood = () => {
 
 
                 <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure><LazyLoadImage src={specialRecipe3} className='w-full h-52' alt="Shoes" /></figure>
+                    <LazyLoad>
+
+                        <img src={specialRecipe3} className='w-full h-52 rounded-xl' alt="Shoes" />
+                    </LazyLoad>
+
                     <div className="card-body">
                         <h2 className="card-title text-blue-600 ">
                             Shahi Rezala
@@ -97,7 +111,10 @@ const SpecialFood = () => {
 
 
                 <div className="card w-96 bg-base-100 shadow-xl">
-               <figure><LazyLoadImage src={specialRecipe4} className='w-full h-52' alt="Shoes" /></figure>
+                    <LazyLoad>
+
+                        <img src={specialRecipe4} className='w-full h-52 rounded-xl' alt="Shoes" />
+                    </LazyLoad>
                     <div className="card-body">
                         <h2 className="card-title text-blue-600 ">
                             Fish Korma
@@ -122,14 +139,17 @@ const SpecialFood = () => {
 
 
                 <div className="card w-96 bg-base-100 shadow-xl">
-                  <figure><LazyLoadImage src={specialRecipe5} className='w-full h-52' alt="Shoes" /></figure>
+                    <LazyLoad>
+
+                        <img src={specialRecipe5} className='w-full h-52 rounded-xl' alt="Shoes" />
+                    </LazyLoad>
                     <div className="card-body">
                         <h2 className="card-title text-blue-600 ">
-                        Beef Vindaloo
+                            Beef Vindaloo
                             <div className="badge badge-secondary">NEW</div>
                         </h2>
                         <p className=' font-bold text-green-700'>
-                        Vindaloo is traditionally an Indian dish that derived from the Portuguese dish “Carne de Vinha d’ Alhos”, a dish of meat, usually lamb, with wine and garlic. The “Carne de Vinha d’ Alhos” was first brought to Goa by the Portuguese and became a Goan meal often served during special occasions</p>
+                            Vindaloo is traditionally an Indian dish that derived from the Portuguese dish “Carne de Vinha d’ Alhos”, a dish of meat, usually lamb, with wine and garlic. The “Carne de Vinha d’ Alhos” was first brought to Goa by the Portuguese and became a Goan meal often served during special occasions</p>
                         <div className="card-actions items-center text-center border-2 border-orange-400 px-3 py-3">
                             <div className="">
 
@@ -149,14 +169,17 @@ const SpecialFood = () => {
 
 
                 <div className="card w-96 bg-base-100 shadow-xl">
-                  <figure><LazyLoadImage src={specialRecipe6} className='w-full h-52' alt="Shoes" /></figure>
+                    <LazyLoad>
+
+                        <img src={specialRecipe6} className='w-full h-52 rounded-xl' alt="Shoes" />
+                    </LazyLoad>
                     <div className="card-body">
                         <h2 className="card-title text-blue-600 ">
-                        Bhuna Khichuri – basic
+                            Bhuna Khichuri – basic
                             <div className="badge badge-secondary">NEW</div>
                         </h2>
                         <p className=' font-bold text-green-700'>
-                        Bhuna Khichuri – basicis traditionally an Indian dish that derived from the Portuguese dish “Carne de Vinha d’ Alhos”, a dish of meat, usually lamb, with wine and garlic. The “Carne de Vinha d’ Alhos” was first brought to Goa by the Portuguese and became a Goan meal often served during special occasions</p>
+                            Bhuna Khichuri – basicis traditionally an Indian dish that derived from the Portuguese dish “Carne de Vinha d’ Alhos”, a dish of meat, usually lamb, with wine and garlic. The “Carne de Vinha d’ Alhos” was first brought to Goa by the Portuguese and became a Goan meal often served during special occasions</p>
                         <div className="card-actions items-center text-center border-2 border-orange-400 px-3 py-3">
                             <div className="">
 
@@ -179,7 +202,7 @@ const SpecialFood = () => {
 
 
 
-           
+
 
 
         </>
