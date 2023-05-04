@@ -44,7 +44,7 @@ const Register = () => {
                 console.log(createdUser)
                 navigate('/')
 
-                updateUserData(name,photo)
+                updateUserData(name,photo,email)
                 .then(()=>{
                     console.log('update Profile')
                 })
@@ -62,10 +62,6 @@ const Register = () => {
 
 
     }
-
-
-
-
     return (
         <>
             <div className="hero min-h-screen bg-base-200">

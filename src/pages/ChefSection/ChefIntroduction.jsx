@@ -1,5 +1,4 @@
 import React from 'react';
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { FaEye } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';

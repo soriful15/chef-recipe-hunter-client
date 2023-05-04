@@ -12,6 +12,7 @@ import ChefDetails from "../pages/ChefSection/ChefDetails";
 import Register from "../pages/Register/Register";
 
 import PrivateRoute from "./PrivateRoute";
+import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 
   const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ import PrivateRoute from "./PrivateRoute";
         {
             path:'/register',
             element:<Register></Register>
+        },
+        {
+            path:'/updateProfile',
+            element:<UpdateProfile></UpdateProfile>
         },
         {
             path:'/chefCategories/:id',
