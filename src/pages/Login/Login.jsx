@@ -65,7 +65,7 @@ let from=location.state?.from?.pathname || '/';
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left ml-2">
-                        <h1 className="text-5xl font-bold ml-2">Login now!</h1>
+                        <h1 className="text-5xl font-bold ml-2 mb-3">Login now!</h1>
                         <div className=''>
                             <div className=''>
                                 <Lottie animationData={login} loop={true} />
