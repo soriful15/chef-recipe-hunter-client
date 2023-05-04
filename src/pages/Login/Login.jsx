@@ -5,7 +5,11 @@ import Lottie from 'lottie-react'
 import login from '../../assets/107385-login.json'
 import { AuthContext } from '../../Provider/AuthProvider';
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import {  toast } from 'react-toastify';
 const Login = () => {
+
+    const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
     const { singIn, googleProvider, gitProvider } = useContext(AuthContext)
 
 const navigate=useNavigate();
@@ -13,6 +17,8 @@ const location=useLocation();
 let from=location.state?.from?.pathname || '/';
     const handleSingIn = (e) => {
         e.preventDefault();
+        setSuccess('')
+        setError('')
         const form = e.target;
         const password = form.password.value
         const email = form.email.value
@@ -20,6 +26,8 @@ let from=location.state?.from?.pathname || '/';
         singIn(email, password)
             .then((result) => {
                 const loggedUser = result.user
+                setError('')
+                setSuccess(toast("User has created successfully"))
                 form.reset()
                 console.log(loggedUser);
                 navigate(from,{replace:true})
@@ -27,6 +35,7 @@ let from=location.state?.from?.pathname || '/';
             })
             .catch(error => {
                 console.log(error);
+                setError(error.message)
             })
     }
 
@@ -89,6 +98,8 @@ let from=location.state?.from?.pathname || '/';
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
+                            <p className='text-yellow-400 text-center mb-2 px-4 font-bold text-xl'>{error}</p>
+                            <p className='text-green-600 px-4 text-center mb-2 font-bold text-xl'>{success}</p>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>

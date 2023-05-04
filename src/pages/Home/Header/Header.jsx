@@ -7,8 +7,6 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
     const { user, logOut } = useContext(AuthContext)
 
-
-
     const handleLogOut = () => {
         logOut()
             .then(result => {
