@@ -141,7 +141,7 @@ const Header = () => {
                                                                     title={user.displayName} src={user && user.photoURL} />
                                                             </div>
                                                         </label>
-                                                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-orange-200 rounded-box w-52">
+                                  <ul tabIndex={0} className="mt-3  p-2 shadow menu menu-compact  bg-orange-200 rounded-box w-52">
                                                             <li>
                                                                 <Link to='/updateProfile' className="justify-between font-bold">
                                                                     Profile
@@ -150,14 +150,14 @@ const Header = () => {
                                                             </li>
                                                             <li><Link to="/login" className='font-bold' onClick={handleLogOut}>Logout</Link></li>
                                                         </ul>
-                                                    </div></> : <> <li>
+                                                    </div></> : <>
 
                                                         <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
                                                             <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
                                                                 Login
                                                             </button>
                                                         </NavLink>
-                                                    </li></>
+                                                    </>
 
                                                 }
                                             </div>
