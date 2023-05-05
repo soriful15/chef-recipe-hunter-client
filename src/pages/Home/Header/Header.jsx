@@ -7,6 +7,8 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
     const { user, logOut } = useContext(AuthContext)
 
+
+
     const handleLogOut = () => {
         logOut()
             .then(result => {
@@ -51,14 +53,14 @@ const Header = () => {
                                                     title={user.displayName} src={user && user.photoURL} />
                                             </div>
                                         </label>
-                                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-orange-200 rounded-box w-52">
                                             <li>
-                                                <Link to='/updateProfile' className="justify-between">
+                                                <Link to='/updateProfile' className="justify-between font-bold">
                                                     Profile
-                                                    <span className="badge ml-1">New</span>
+
                                                 </Link>
                                             </li>
-                                            <li><Link to="/login" onClick={handleLogOut}>Logout</Link></li>
+                                            <li><Link to="/login" className='font-bold' onClick={handleLogOut}>Logout</Link></li>
                                         </ul>
                                     </div></> : <> <li>
 
@@ -138,32 +140,24 @@ const Header = () => {
                                                                 <img data-toggle="tooltip"
                                                                     title={user.displayName} src={user && user.photoURL} />
                                                             </div>
-
-
-
-
-
-
-
                                                         </label>
-                                                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                                                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-orange-200 rounded-box w-52">
                                                             <li>
-                                                                <Link to='/updateProfile' className="justify-between">
+                                                                <Link to='/updateProfile' className="justify-between font-bold">
                                                                     Profile
-                                                                    <span className="badge ml-1">New</span>
+
                                                                 </Link>
-
-
                                                             </li>
-                                                            <li><Link to="/login" onClick={handleLogOut}>Logout</Link></li>
+                                                            <li><Link to="/login" className='font-bold' onClick={handleLogOut}>Logout</Link></li>
                                                         </ul>
-                                                    </div></> :
+                                                    </div></> : <> <li>
 
                                                         <NavLink to='/login' title=' Login Link' className={({ isActive }) => isActive ? "text-blue-600" : ''}>
-                                                            <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>Login
+                                                            <button title='Star Applying Link' className={`bg-violet-800 text-white text-xl px-4 py-4 ${({ isActive }) => isActive ? "text-blue-600" : ''}`}>
+                                                                Login
                                                             </button>
                                                         </NavLink>
-
+                                                    </li></>
 
                                                 }
                                             </div>

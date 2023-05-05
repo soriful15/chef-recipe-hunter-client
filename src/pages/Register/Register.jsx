@@ -20,21 +20,20 @@ const Register = () => {
         const photo = form.photo.value
         // console.log(name, photo, email, password)
 
-        if (password.length < 6) {
-            setError('please add at least 6 characters in your password')
-            return
+    
+        //  Validate input
+        if (!password || !name || !email || !photo) {
+            setError("Please fill the from");
         }
-        /* if (!/(?=.*[A-Z])/.test(password)) {
-            setError('please add at least one uppercase')
-            return;
+        if (!email.trim()) {
+            setError("Eamil is required");
         }
-        else if (!/(?=.*[0-9])/.test(password)) {
-            setError('please add at least two numbers ')
-            return;
-        } */
-
-
-
+        if (!password.trim()) {
+            setError("password is required");
+        }
+        if (password.trim().length < 6) {
+            setError("Password must be at least 6 characters");
+        }
         createUser(email, password)
             .then((result) => {
                 const createdUser = result.user
